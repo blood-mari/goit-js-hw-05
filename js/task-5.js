@@ -105,7 +105,7 @@
 
 class Car {
     // Write code under this line
-    static getSpecs({ speed, price, maxSpeed,  isOn, distance }) {
+    static getSpecs({ speed, price, maxSpeed,  isOn, distance } = {}) {
         return `maxSpeed: ${maxSpeed}, speed: ${speed}, isOn: ${isOn}, distance: ${distance}, price: ${price}`
      }
     constructor({
@@ -114,7 +114,7 @@ class Car {
         maxSpeed,
         isOn = false,
         distance = 0,
-      }) {
+      } = {}) {
         this.speed = speed;
         this._price = price;
         this.maxSpeed = maxSpeed;
